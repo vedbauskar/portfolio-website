@@ -1,5 +1,5 @@
 const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/vedbauskar/" },
+  { name: "Instagram", href: "https://www.instagram.com/ved.bauskar/" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/vedbauskar/" },
   { name: "GitHub", href: "https://github.com/vedbauskar" },
   { name: "Spotify", href: "https://open.spotify.com/user/5qdxsy6hrb99kdrzvf2gdfhem?si=3be2f3e785434f18" },

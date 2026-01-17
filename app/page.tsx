@@ -31,7 +31,7 @@ const projects = [
         title: "Osteoperosis Risk Predictor",
         description: "Machine learning web app for clinical risk classification using multi model evaluation.",
         tags: ["Python", "Pandas", "NumPy", "Scikit-learn"],
-        url: "https://github.com/vedbauskar/Osteoporosis-Risk-Prediction-ML-model",
+        url: "https://github.com/dbrawla/Osteoporosis-Risk-Prediction-ML-model",
     },
 ];
 

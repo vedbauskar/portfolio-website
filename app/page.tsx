@@ -11,16 +11,14 @@ import { ThemeButtons } from "@/components/ThemeToggle";
 const experiences = [
     { logo: "/images/ucdavis_logo.png", name: "UC Davis", type: "Education" },
     { logo: "/images/usc_logo.png", name: "USC", type: "Education" },
-    { logo: "/images/aisc_logo.png", name: "AISC", type: "Leadership" },
-    { logo: "/images/gdsc_logo.png", name: "GDSC", type: "Leadership" },
 ];
 
 const projects = [
     {
-        title: "Sacstak",
+        title: "Sactrak",
         description: "Full stack web platform for real time course catalog indexing and academic data visualization.",
         tags: ["Python", "Vite", "Rest APIS", "Supabase"],
-        url: "https://www.sacstak.com",
+        url: "https://www.sactrak.com",
     },
     {
         title: "Ibdiary",
@@ -142,13 +140,7 @@ export default function Home() {
                     </section>
                 </FadeInOnce>
 
-                {/* Connect Section */}
-                <Connect
-                    description="Let's connect! Feel free to reach out on any of these platforms."
-                    instagramUrl="https://instagram.com/vedbauskar"
-                    githubUrl="https://github.com/vedbauskar"
-                    linkedinUrl="https://linkedin.com/in/vedbauskar"
-                />
+
 
                 {/* Footer */}
                 <footer>

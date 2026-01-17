@@ -158,8 +158,7 @@ export default function Home() {
                                     <ThemeButtons />
                                 </div>
                                 <a
-                                    href="/resume.pdf"
-                                    target="_blank"
+                                    href="mailto:ved.bauskar@gmail.com"
                                     className="text-muted-foreground text-xs hover:text-foreground transition-colors underline"
                                 >
                                     Request Resume

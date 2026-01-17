@@ -1,8 +1,8 @@
 const socials = [
-  { name: "X", href: "#" },
-  { name: "LinkedIn", href: "#" },
-  { name: "GitHub", href: "#" },
-  { name: "Email", href: "mailto:your@email.com" },
+  { name: "Instagram", href: "https://www.instagram.com/vedbauskar/" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/vedbauskar/" },
+  { name: "GitHub (WIP)", href: "#" },
+  { name: "Email", href: "mailto:ved.bauskar@gmail.com" },
 ];
 
 const SocialLinks = () => {
@@ -13,7 +13,7 @@ const SocialLinks = () => {
           <a
             href={social.href}
             className="social-link"
-            target={social.href.startsWith("mailto") ? undefined : "_blank"}
+            target={social.href?.startsWith("mailto") ? undefined : "_blank"}
             rel="noopener noreferrer"
           >
             {social.name}

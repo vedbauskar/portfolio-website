@@ -17,9 +17,9 @@ const Connect = ({
     linkedinUrl = "#",
 }: ConnectProps) => {
     const socials = [
-        { name: "Instagram", icon: Instagram, url: instagramUrl, color: "hover:text-pink-500" },
-        { name: "GitHub", icon: Github, url: githubUrl, color: "hover:text-gray-400" },
-        { name: "LinkedIn", icon: Linkedin, url: linkedinUrl, color: "hover:text-blue-500" },
+        { name: "Instagram", icon: Instagram, url: instagramUrl, color: "hover:text-pink-500", clickable: true },
+        { name: "GitHub (WIP)", icon: Github, url: "#", color: "text-gray-400 cursor-default", clickable: false },
+        { name: "LinkedIn", icon: Linkedin, url: linkedinUrl, color: "hover:text-blue-500", clickable: true },
     ];
 
     return (
@@ -41,10 +41,14 @@ const Connect = ({
                         return (
                             <a
                                 key={social.name}
-                                href={social.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={`flex items-center gap-2 px-6 py-3 bg-card border border-border rounded-lg transition-all duration-300 hover:border-foreground hover:-translate-y-1 ${social.color}`}
+                                href={social.clickable ? social.url : undefined}
+                                target={social.clickable ? "_blank" : undefined}
+                                rel={social.clickable ? "noopener noreferrer" : undefined}
+                                className={`flex items-center gap-2 px-6 py-3 bg-card border border-border rounded-lg transition-all duration-300 ${social.clickable
+                                    ? `hover:border-foreground hover:-translate-y-1 ${social.color}`
+                                    : "cursor-default opacity-80"
+                                    }`}
+                                onClick={(e) => !social.clickable && e.preventDefault()}
                             >
                                 <Icon className="h-5 w-5" />
                                 <span className="text-sm font-medium">{social.name}</span>

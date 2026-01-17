@@ -9,32 +9,30 @@ import Connect from "@/components/Connect";
 import { ThemeButtons } from "@/components/ThemeToggle";
 
 const experiences = [
-    { icon: "🎓", name: "Stanford University", type: "Education" },
-    { icon: "💻", name: "Tech Internship", type: "Software" },
-    { icon: "🔬", name: "Research Lab", type: "Research" },
-    { icon: "🎨", name: "Design Studio", type: "Creative" },
+    { logo: "/images/ucdavis_logo.png", name: "UC Davis", type: "Education" },
+    { logo: "/images/usc_logo.png", name: "USC", type: "Education" },
+    { logo: "/images/aisc_logo.png", name: "AISC", type: "Leadership" },
+    { logo: "/images/gdsc_logo.png", name: "GDSC", type: "Leadership" },
 ];
 
 const projects = [
     {
-        title: "Neural Interface",
-        description: "An experimental project exploring brain-computer interaction patterns and accessibility.",
-        tags: ["Python", "TensorFlow", "Research"],
+        title: "Sacstak",
+        description: "Full stack web platform for real time course catalog indexing and academic data visualization.",
+        tags: ["Python", "Vite", "Rest APIS", "Supabase"],
+        url: "https://www.sacstak.com",
     },
     {
-        title: "Void Engine",
-        description: "Minimalist game engine built from scratch focusing on procedural generation.",
-        tags: ["C++", "OpenGL", "Graphics"],
+        title: "Ibdiary",
+        description: "Mobile health application for longitudinal symptom and nutrition tracking with calendar and analytics visualization.",
+        tags: ["Javascript", "React Native"],
+        url: "#",
     },
     {
-        title: "Cipher Protocol",
-        description: "End-to-end encrypted messaging system with zero-knowledge proofs.",
-        tags: ["Rust", "Cryptography", "Security"],
-    },
-    {
-        title: "Flux Design System",
-        description: "Component library and design tokens for consistent dark-theme interfaces.",
-        tags: ["React", "TypeScript", "Design"],
+        title: "Osteoperosis Risk Predictor",
+        description: "Machine learning web app for clinical risk classification using multi model evaluation.",
+        tags: ["Python", "Pandas", "NumPy", "Scikit-learn"],
+        url: "https://github.com/vedbauskar/Osteoporosis-Risk-Prediction-ML-model",
     },
 ];
 
@@ -50,16 +48,16 @@ export default function Home() {
                 {/* Hero Section - Static, no animations */}
                 <section className="mb-20">
                     <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4 tracking-tight">
-                        Your Name
+                        Ved Bauskar
                     </h1>
 
                     <p className="text-xl text-muted-foreground mb-4 leading-relaxed">
-                        Computer Science student crafting elegant digital experiences.
+                        Data Science and Economics @ USC
                     </p>
 
                     <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                        Passionate about the intersection of technology and design.
-                        Currently exploring machine learning and creative coding.
+                        Looking for SWE, Product Management, and Data Science roles for 2026!
+                        Actively trying to put more on this website.
                     </p>
 
                     <SocialLinks />
@@ -77,7 +75,13 @@ export default function Home() {
                                     className="flex items-center justify-between py-3 group cursor-default"
                                 >
                                     <div className="flex items-center gap-4">
-                                        <span className="text-xl">{exp.icon}</span>
+                                        <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white p-1">
+                                            <img
+                                                src={exp.logo}
+                                                alt={exp.name}
+                                                className="w-full h-full object-contain"
+                                            />
+                                        </div>
                                         <span className="text-foreground font-medium group-hover:text-muted-foreground transition-colors">
                                             {exp.name}
                                         </span>
@@ -97,9 +101,12 @@ export default function Home() {
 
                         <div className="grid gap-4">
                             {projects.map((project) => (
-                                <div
+                                <a
                                     key={project.title}
-                                    className="group p-6 bg-card border border-border rounded-lg cursor-pointer relative overflow-hidden hover:-translate-y-1 transition-transform duration-200"
+                                    href={project.url}
+                                    target={project.url !== "#" ? "_blank" : undefined}
+                                    rel={project.url !== "#" ? "noopener noreferrer" : undefined}
+                                    className="group p-6 bg-card border border-border rounded-lg cursor-pointer relative overflow-hidden block hover:-translate-y-1 transition-transform duration-200"
                                 >
                                     {/* Subtle sigil accent on hover */}
                                     <div className="absolute -right-8 -top-8 w-24 h-24 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
@@ -129,7 +136,7 @@ export default function Home() {
                                             </span>
                                         ))}
                                     </div>
-                                </div>
+                                </a>
                             ))}
                         </div>
                     </section>
@@ -138,9 +145,9 @@ export default function Home() {
                 {/* Connect Section */}
                 <Connect
                     description="Let's connect! Feel free to reach out on any of these platforms."
-                    instagramUrl="https://instagram.com"
-                    githubUrl="https://github.com"
-                    linkedinUrl="https://linkedin.com"
+                    instagramUrl="https://instagram.com/vedbauskar"
+                    githubUrl="https://github.com/vedbauskar"
+                    linkedinUrl="https://linkedin.com/in/vedbauskar"
                 />
 
                 {/* Footer */}
@@ -151,7 +158,7 @@ export default function Home() {
                             <div className="flex flex-col gap-2">
                                 <div className="flex items-center gap-4">
                                     <p className="text-muted-foreground text-sm">
-                                        © 2026 Your Name
+                                        © 2026 Ved Bauskar
                                     </p>
                                     <ThemeButtons />
                                 </div>
@@ -167,7 +174,7 @@ export default function Home() {
                             {/* Right side - Version and Last Updated */}
                             <div className="text-right">
                                 <p className="text-muted-foreground text-xs">
-                                    v1.0.0
+                                    v1.1.0
                                 </p>
                                 <p className="text-muted-foreground text-xs">
                                     Updated Jan 2026

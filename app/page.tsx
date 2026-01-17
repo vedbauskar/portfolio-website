@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import CyberSigil from "@/components/CyberSigil";
 import FadeInOnce from "@/components/FadeInOnce";
 import ExperienceItem from "@/components/ExperienceItem";
@@ -74,9 +75,11 @@ export default function Home() {
                                 >
                                     <div className="flex items-center gap-4">
                                         <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white p-1">
-                                            <img
+                                            <Image
                                                 src={exp.logo}
                                                 alt={exp.name}
+                                                width={48}
+                                                height={48}
                                                 className="w-full h-full object-contain"
                                             />
                                         </div>

@@ -25,7 +25,7 @@ const projects = [
         title: "Ibdiary",
         description: "Mobile health application for longitudinal symptom and nutrition tracking with calendar and analytics visualization.",
         tags: ["Javascript", "React Native"],
-        url: "#",
+        url: "https://thunkable.site/w/w64ZPsBpPJyYz47cc6fWn",
     },
     {
         title: "Osteoperosis Risk Predictor",
